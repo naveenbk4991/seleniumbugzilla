@@ -18,8 +18,8 @@ namespace seleniumbugzilla.TestScripts.WebElement
             NavigationHelper.NavigatieToUrl(Objectrepository.Config.GetWebsite());
             try
             {
-              ReadOnlyCollection<IWebElement> col = Objectrepository.Driver.FindElements(By.TagName("input"));
-                Console.WriteLine("count {0}"+col.Count());
+              //ReadOnlyCollection<IWebElement> col = Objectrepository.Driver.FindElements(By.TagName("input"));
+                //Console.WriteLine("count {0}"+col.Count());
 
                 //Objectrepository.Driver.FindElement(By.Id("header"));
                 //Objectrepository.Driver.FindElement(By.ClassName("btn"));

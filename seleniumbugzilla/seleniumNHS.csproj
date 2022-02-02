@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass\BaseClass.cs" />
+    <Compile Include="Componenthelpers\ButtonHelper.cs" />
+    <Compile Include="Componenthelpers\FindsByAttribute.cs" />
     <Compile Include="Componenthelpers\GenricHelper.cs" />
     <Compile Include="Componenthelpers\LinkHelper.cs" />
     <Compile Include="Componenthelpers\NavigationHelper.cs" />
@@ -69,7 +71,6 @@
     <Compile Include="Settingss\AppConfigKeys.cs" />
     <Compile Include="Settingss\Objectrepository.cs" />
     <Compile Include="TestScripts\Button\HandleButton.cs" />
-    <Compile Include="TestScripts\HyperLink\TestHyperLink.cs" />
     <Compile Include="TestScripts\PageNavgiation\TestPageNavigation.cs" />
     <Compile Include="TestScripts\WebElement\TestWebElement.cs" />
     <Compile Include="UnitTest1.cs" />

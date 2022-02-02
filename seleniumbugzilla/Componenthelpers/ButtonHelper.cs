@@ -7,14 +7,15 @@ using OpenQA.Selenium;
 
 namespace seleniumbugzilla.Componenthelpers
 {
-    public class LinkHelper
-    {
-        private static IWebElement element;
+    public class ButtonHelper
 
-        public static void ClickLink(By Locator)
+    {
+        private static IWebElement ele;
+        public static void ClickButton(By locator)
         {
-            element = GenricHelper.GetElement(Locator);
-            element.Click(); 
+            ele = GenricHelper.GetElement(locator);
+                ele.Click();
         }
+
     }
 }
