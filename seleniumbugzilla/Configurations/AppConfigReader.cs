@@ -19,6 +19,23 @@ namespace seleniumbugzilla.Configurations
 
         }
 
+        public int GetElementloadTimeout()
+        {
+            string timeout = ConfigurationManager.AppSettings.Get(AppConfigKeys.ElementLoadTimeout);
+            if (timeout == null)
+                return 30;
+            return Convert.ToInt32(timeout);
+        }
+
+        public int GetPageloadTimeout()
+        {
+            string timeout=ConfigurationManager.AppSettings.Get(AppConfigKeys.PageLoadTimeout);
+            if (timeout == null)
+                return 30;
+            return Convert.ToInt32(timeout);
+
+        }
+
         public string GetPassword()
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Password);
@@ -33,5 +50,7 @@ namespace seleniumbugzilla.Configurations
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Website);
         }
+
+        
     }
 }

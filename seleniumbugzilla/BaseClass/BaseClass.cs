@@ -24,6 +24,13 @@ namespace seleniumbugzilla.BaseClass
             option.AddArgument("start-maximized");
             return option;
         }
+        private  static InternetExplorerOptions GetIEoptions()
+        {
+            InternetExplorerOptions Options = new InternetExplorerOptions();
+            Options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+            Options.EnsureCleanSession = true;
+            return Options;
+        }
         private static IWebDriver GetFireFoxDriver()
         {
             IWebDriver driver = new FirefoxDriver();
@@ -37,7 +44,7 @@ namespace seleniumbugzilla.BaseClass
         }
         private static IWebDriver GetIEDriver()
         {
-            IWebDriver driver = new InternetExplorerDriver();
+            IWebDriver driver = new InternetExplorerDriver(GetIEoptions());
             return driver;
 
         }
@@ -61,15 +68,17 @@ namespace seleniumbugzilla.BaseClass
                 default:
                     throw new NoSuitableDriverFound("Driver not found " + Objectrepository.Config.GetBrowser().ToString());
             }
+            Objectrepository.Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Objectrepository.Config.GetPageloadTimeout());
+            Objectrepository.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Objectrepository.Config.GetElementloadTimeout());
         }
         [AssemblyCleanup]
         public static void TearDown()
         {
-            if(Objectrepository.Driver  != null)
-            {
-               Objectrepository.Driver.Close();
-                Objectrepository.Driver.Quit();
-            }
+            //if(Objectrepository.Driver  != null)
+            //{
+            //   Objectrepository.Driver.Close();
+            //    Objectrepository.Driver.Quit();
+            //}
         }
     }
 

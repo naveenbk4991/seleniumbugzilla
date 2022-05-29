@@ -14,6 +14,9 @@ namespace seleniumbugzilla.Interfac
         string GetUsername(); 
         String GetPassword();
         String GetWebsite();
+        int GetPageloadTimeout();
+        int GetElementloadTimeout();
+
 
     }
 }

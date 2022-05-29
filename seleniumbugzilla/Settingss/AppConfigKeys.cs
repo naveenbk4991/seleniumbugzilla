@@ -12,5 +12,8 @@ namespace seleniumbugzilla.Settingss
         public const String Username = "Username";
         public const String Password = "Password";
         public const String Website = "Website";
+        public const string PageLoadTimeout = "PageLoadTimeout";
+        public const string ElementLoadTimeout = "ElementLoadTimeout";
+
     }
 }
